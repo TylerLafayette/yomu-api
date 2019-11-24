@@ -43,7 +43,7 @@ func defaultChiRouter() *chi.Mux {
 	r.Use(cors.Handler)
 
 	r.Get("/", func(w http.ResponseWriter, r *http.Request) {
-		render.PlainText(w, r, "hello")
+		render.PlainText(w, r, "hello world :)")
 	})
 
 	return r
