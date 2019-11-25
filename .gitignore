@@ -13,3 +13,4 @@
 
 yomu-api
 vendor/
+!public/vendor
