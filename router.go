@@ -51,7 +51,7 @@ func defaultChiRouter() *chi.Mux {
 	r.Use(cors.Handler)
 
 	// Attach the static folder handler.
-	r.Handle("/static", staticHandler())
+	r.Handle("/public", staticHandler())
 
 	r.Get("/", func(w http.ResponseWriter, r *http.Request) {
 		render.PlainText(w, r, "hello world :)")
