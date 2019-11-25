@@ -6,7 +6,7 @@ import (
 
 // DefaultPort is the app's default port it will listen on if the
 // environment variable is not set.
-const DefaultPort = ":8080"
+const DefaultPort = "8080"
 
 // Config contains configuration information for the app.
 type Config struct {
@@ -27,6 +27,8 @@ func CreateConfig() *Config {
 		// Use the default port if no environment variable is found.
 		port = DefaultPort
 	}
+
+	port = ":" + port
 
 	return NewConfig(port)
 }
